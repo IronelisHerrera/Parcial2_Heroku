@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="align-content-center">
-        <button type="button" class="btn btn-lg btn-block btn-success" disabled>${clickNum} Visits</button>
+        <button type="button" class="btn btn-lg btn-block btn-warning" disabled>${clickNum} Visits</button>
     </div>
     <br>
     <div class="card-group">
@@ -77,14 +77,7 @@
                 <div align="left" id="piechart3"></div>
             </div>
         </div>
-        <div class="card text-center" style="width: 18rem;">
-            <div class="card-header">
-                <h5>Visits By Ip</h5>
-            </div>
-            <div class="card-body">
-                <div align="left" id="piechart4"></div>
-            </div>
-        </div>
+       
     </div>
 </div>
 
@@ -115,7 +108,7 @@
         drawChartBrowser();
         drawChartDate();
         drawChartOS();
-        drawChartip()
+        //drawChartip()
     });
 
 
@@ -227,45 +220,6 @@
         });
     }
 
-    function drawChartip() {
-        $.ajax({
-            url: '/rest/ipUrl/${urlId}',
-            success: function (response) {
-                var data = [], labels = [];
-                response.forEach(function (val) {
-                    data.push(val.value);
-                    labels.push(val.name);
-                });
-
-                var options = {
-                    chart: {
-                        type: 'donut',
-                    },
-                    series: data,
-                    labels: labels,
-                    theme: {
-                        monochrome: {
-                            enabled: true
-                        }
-                    },
-                    responsive: [{
-                        breakpoint: 480,
-                        options: {
-                            chart: {
-                                width: 150
-                            },
-                            legend: {
-                                position: 'bottom'
-                            }
-                        }
-                    }]
-                };
-
-                var chart = new ApexCharts(document.querySelector("#piechart4"), options);
-                chart.render();
-            }
-        });
-    }
 
 
 </script>

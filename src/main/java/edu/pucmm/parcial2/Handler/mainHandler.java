@@ -29,8 +29,8 @@ public class mainHandler {
 
     static User currentUser = new User();
     Gson gson = new Gson();
-
-static String ip_val, hex_val, new_url, base_url = "/ne/";
+//Para subir a Heroku >  "/ne/"
+static String ip_val, hex_val, new_url, base_url = "http://localhost:4567/ne/";
 
     static Url url_value;
     User aux;
@@ -38,15 +38,6 @@ static String ip_val, hex_val, new_url, base_url = "/ne/";
     int auxi, auxi2;
 
     public void startup() {
-
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        if (processBuilder.environment().get("PORT") != null) {
-            port(Integer.parseInt(processBuilder.environment().get("PORT")));
-        }else{
-            port(8080);
-        }
-        //Comentando
-
         staticFiles.location("/publico");
 
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);

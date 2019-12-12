@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Form - HTML5</title>
+    <title>Iniciar Sesion</title>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body class="bg-light">
 
@@ -33,19 +34,31 @@
                 <div class="row">
                     <div id="id"></div>
                     <div class="mb-2" style="width: 100%;">
-                        <label for="firstName">Nombre usuario</label>
-                        <input type="text" class="form-control" name="username" width="col-md-auto" required>
-                        <div class="invalid-feedback">
-                            Primer nombre es requerido
+                        <div class="input-group form-group">
+                            <label for="firstName">Nombre usuario</label> &nbsp; &nbsp;
+                            <div class="input-group-prepend" >
+                                <span class="input-group-text"><i class="fas fa-user-circle" style="color: #fd7e14" ></i></span>
+                                <input type="text" class="form-control" name="username" width="col-md-auto" required>
+                            </div>
+                            <div class="invalid-feedback">
+                                Primer nombre es requerido
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div style="width: 100%;" class="mb-2">
-                        <label for="sector">Clave</label>
-                        <input type="password" class="form-control col-md-auto" name="password" required>
-                        <div class="invalid-feedback">
-                            Por favor introduzca su direccion de envio.
+                        <div class="input-group form-group">
+                            <label for="sector">Clave</label>
+
+                            <div class="input-group-prepend" >
+                                <span class="input-group-text"><i class="fas fa-key"  style="color: #0b2e13" ></i></span>
+                                <input type="password" class="form-control " name="password" required>
+
+                            <div class="invalid-feedback">
+                                Por favor introduzca su direccion de envio.
+                            </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -55,12 +68,12 @@
                     </div>
                 </div>
                 <hr>
-                <button class="btn btn-primary btn-md btn-block" type="submit" id="sendButton">Enviar</button>
+                <button class="btn btn-primary btn-md btn-block" type="submit" id="sendButton">Iniciar Sesion</button>
             </form>
         </div>
     </div>
     <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">Acortador de links by Nicole e Ironelis</p>
+
     </footer>
 </div>
 <script src="../js/jQuery.js"></script>

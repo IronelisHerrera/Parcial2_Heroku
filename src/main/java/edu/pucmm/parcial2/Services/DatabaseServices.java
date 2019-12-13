@@ -26,7 +26,7 @@ public class DatabaseServices<T> {
         if(entidad == null){
             return null;
         }
-        //aplicando la clase de reflexión.
+
         for(Field f : entidad.getClass().getDeclaredFields()) {  //tomando todos los campos privados.
             if (f.isAnnotationPresent(Id.class)) {
                 try {
@@ -55,7 +55,6 @@ public class DatabaseServices<T> {
                 return;
             }
         }catch (IllegalArgumentException ie){
-            //
             System.out.println("ERROR: Parametro ilegal.");
         }
 

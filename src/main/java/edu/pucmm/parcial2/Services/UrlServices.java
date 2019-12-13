@@ -20,17 +20,6 @@ public class UrlServices  extends DatabaseServices<Url>  {
         return instancia;
     }
 
-//    public Url getUrl(String url, long Userid ) {
-//        EntityManager em = getEntityManager();
-//        Query query = em.createQuery("select e from Header e join e.urls l where l.id like :Userid and url like :url", Url.class);
-//        query.setParameter("url", url);
-//        query.setParameter("Userid", Userid);
-//        List<Url> list = query.getResultList();
-//        if (list.size() > 0)
-//            return list.get(0);
-//        else
-//            return null;
-//    }
 
     public Url getUrl(String redirect) {
         EntityManager em = getEntityManager();
@@ -42,11 +31,6 @@ public class UrlServices  extends DatabaseServices<Url>  {
         else
             return null;
     }
-//    public void EliminarbyCode(String id) {
-//        EntityManager em = getEntityManager();
-//        Query query = em.createQuery("delete from Url where id = :id", Url.class);
-//        query.setParameter("id", id);
-//        query.executeUpdate();
-//    }
+
 
 }

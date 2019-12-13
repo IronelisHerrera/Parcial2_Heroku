@@ -147,7 +147,7 @@ static String ip_val, hex_val, new_url, base_url = "http://localhost:4567/ne/";
             return null;
         }, freeMarkerEngine);
 
-//        REST REQUESTS
+
         get("/rest/urlUser", (request, response) -> {
             currentUser = getSessionUsuario(request);
             if (currentUser != null) {
@@ -213,7 +213,7 @@ static String ip_val, hex_val, new_url, base_url = "http://localhost:4567/ne/";
             return groupbyIP(visits);
         }, JsonTransformer.json());
 
-        // HttpResponse<String> response = Unirest.get('https://api.microlink.io?url=https%3A%2F%2Ftwitter.com%2Ffuturism%2Fstatus%2F882987478541533189');
+
 
     }
 
@@ -301,7 +301,6 @@ static String ip_val, hex_val, new_url, base_url = "http://localhost:4567/ne/";
 
     private User getSessionUsuario(Request request) {
         User user = request.session().attribute("usuario");
-        //System.out.println(user.getUsername() + " " + user.getId());
         return user;
     }
 

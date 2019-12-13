@@ -27,19 +27,7 @@ public class VisitServices extends DatabaseServices<Visit> {
         List<Visit> list = query.getResultList();
         return list;
     }
-//
-//    public void getVisitbyBrowser(long id) {
-//        EntityManager em = getEntityManager();
-//        Query query = em.createQuery("SELECT e.browser as name, count(e.id) as value FROM Visit e group by e.browser");
-//        //query.setParameter("id", id);
-//        List<Object[]> list = query.getResultList();
-//        list.stream().forEach((record) -> {
-//            String name = (String) record[0];
-//            int value = (int) record[1];
-//            System.out.println(name + " " + value);
-//        });
-//
-//    }
+
 
 
 }

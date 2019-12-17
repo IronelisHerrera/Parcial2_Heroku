@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         StartDatabase.getInstancia().startDb();
         new mainHandler().startup();
+        new soapHandler().init();
 
     }
 }
